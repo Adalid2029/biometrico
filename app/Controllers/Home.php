@@ -18,7 +18,8 @@ class Home extends BaseController
     public function index()
     {
         // $this->q->selectTable('ad_persona_marcado', '*', [], 'id_persona_marcado desc')->getResultArray()
-        return view('welcome_message', ['personMarking' => $this->db->table('ad_persona_marcado apm')->join('persona p', 'p.ci = apm.ci')->get()->getResultArray()]);
+        // return view('welcome_message', ['personMarking' => $this->db->table('ad_persona_marcado apm')->join('persona p', 'p.ci = apm.ci')->get()->getResultArray()]);
+        return view('welcome_message', ['personMarking' => $this->q->selectTable('ad_persona_marcado', '*', [], 'id_persona_marcado desc')->getResultArray()]);
     }
     public function search($searchType)
     {
