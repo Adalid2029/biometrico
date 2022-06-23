@@ -98,7 +98,6 @@
             <thead>
                 <th>nro</th>
                 <th>ci</th>
-                <th>nombre</th>
                 <th>marcado</th>
             </thead>
             <tbody>
@@ -106,7 +105,7 @@
                     <tr>
                         <td><?= $value['id_persona_marcado'] ?></td>
                         <td><?= $value['ci'] ?></td>
-                        <td><?= $value['nombre'] ?> <?= $value['paterno'] ?> <?= $value['materno'] ?></td>
+
                         <td><?= $value['marcado'] ?></td>
                     </tr>
                 <?php endforeach ?>
