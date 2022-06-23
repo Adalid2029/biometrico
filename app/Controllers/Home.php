@@ -47,10 +47,10 @@ class Home extends BaseController
     function savePeerMaking()
     {
         $data = $this->request->getVar();
-        // return var_dump("2022-06-17 {$data['hour']}");
+        // return var_dump(date('Y-m-d H:i:s', strtotime("{$data['date-marking']} {$data['hour']}")));
         $insertedPersonMaking = $this->q->insertTable('ad_persona_marcado', [
             'ci' => $data['ci'],
-            'marcado' => date('Y-m-d H:i:s', strtotime("2022-06-17 {$data['hour']}")),
+            'marcado' => date('Y-m-d H:i:s', strtotime("{$data['date-marking']} {$data['hour']}")),
         ]);
         if ($insertedPersonMaking)
             return $this->response->setStatusCode(200)->setJSON(['status' => 'success', 'message' => 'Se ha guardado correctamente']);
