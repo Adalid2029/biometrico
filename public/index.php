@@ -24,8 +24,8 @@ require FCPATH . '../app/Config/Paths.php';
 $paths = new Config\Paths();
 
 // Location of the framework bootstrap file.
-require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
 return;
+require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 // Load environment settings from .env files into $_SERVER and $_ENV
 require_once SYSTEMPATH . 'Config/DotEnv.php';
